@@ -1,0 +1,242 @@
+.detailContent__title{
+	margin: 20px auto 5px auto;
+	width: 70%;
+}
+
+.detailContent__title input{
+	font-size: 24px;
+}
+
+.detailContent__art{
+	margin: 0px auto 20px auto;
+	width: 70%;
+}
+
+.detailContent__container{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+
+.detailContent__leftImageBox{
+	display: flex;
+}
+
+.leftImageBox__small{
+	width: 40px;
+	margin-right: 10px;
+}
+
+.leftImageBox__small img{
+	width: 100%;
+	border: 2px solid;
+	border-radius: 25%;
+	min-height: 40px;
+	/*border: 2px solid transparent;*/
+}
+
+/*.leftImageBox__small img:hover{
+	border-color: #333;
+}*/
+
+.leftImageBox__big{
+	width: 340px;
+}
+
+.leftImageBox__big img{
+	width: 100%;
+}
+
+.detailContent__rightBox{
+	margin-left: 32px;
+	width: 29%;
+	min-width: 418px;
+}
+
+.RScrolled{
+	margin-left: 422px;
+}
+
+.LScrolled{
+	position: fixed;
+	top: 70px;
+}
+
+.rightBox__price{
+	margin-bottom: 5px;
+}
+
+.rightBox__price strong{
+	font-size: 40px;
+}
+
+.rightBox__colorBox{
+	display: flex;
+	margin-bottom: 10px;
+}
+
+.rightBox__color{
+	margin-right: 5px;
+	color: #8b8b8b;
+}
+
+.rightBox__addCart{
+	display: flex;
+}
+
+.rightBox__addCart a{
+	float: left;
+	text-decoration: none;
+	padding: 7px;
+	background-color: #333;
+	color: white;
+	text-align: center;
+}
+
+.rightBox__addToCart{
+	width: 169px;
+	margin-right: 5px;
+}
+
+.rightBox__addToCart:hover{
+	background-color: #555;
+}
+
+.rightBox__addToFav{
+	width: 191px;
+}
+
+.rightBox__addToFav:hover{
+	background-color: #555;
+}
+
+.rightBox__struct{
+	margin-top: 30px;
+}
+
+.rightBox__about{
+	margin-top: 20px;
+}
+
+.rightBox__aboutTop textarea{
+	max-width: 100%;
+	width: 100%;
+}
+
+.rightBox__detail{
+	margin-top: 20px;
+}
+
+.rightBox__detailTop p{
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.rightBox__detailItem{
+	display: flex;
+	margin-top: 6px;
+	justify-content: space-between;
+}
+
+.rightBox__detailBox{
+	margin-top: 20px;
+}
+
+.dots:nth-child(2) {
+  flex: 1 0;
+  border-bottom: 1px dotted #000;
+  height: 1em;
+  margin: 0 .4em;
+}
+
+.small__inputBox{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 25%;
+	margin-bottom: 3px;
+}
+
+.small__inputBox:hover{
+	box-shadow: 0px 0px 14px -3px rgba(0,0,0,1);
+}
+
+.small__inputBox:hover #small__img{
+	-webkit-filter: brightness(75%);
+  filter: brightness(75%);
+}
+
+.small__inputBox i{
+	font-size: 24px;
+	position: absolute;
+	z-index: -1;
+}
+
+.small__input{
+	outline: 0;
+opacity: 0;
+/*pointer-events: none;*/
+user-select: none;
+width: 40px;
+height: 40px;
+position: absolute;
+}
+
+.big__inputBox{
+/*	height: 100%;*/
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+}
+
+.big__inputBox i{
+	font-size: 50px;
+	position: absolute;
+}
+
+#big__input{
+	min-height: 100px;
+	height: 100%;
+width: 100%;
+outline: 0;
+opacity: 0;
+user-select: none;
+position: absolute;
+top: 0;
+}
+
+.big__imgBox{
+	display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+min-height: 167px;
+}
+
+.big__imgBox i{
+	font-size: 50px;
+	position: absolute;
+	z-index: -1;
+}
+
+.big__imgBox:hover #big__img{
+	-webkit-filter: brightness(75%);
+  filter: brightness(75%);
+}
+
+.detailContent input[type="text"]{
+	background-color: #9995;
+	padding-left: 5px;
+	min-height: 25px;
+}
+
+.detailContent input[type="text"]:not(.notWidth){
+	width: 100%;
+}
+
+.detailContent textarea{
+	background-color: #9995;
+	padding: 5px 0px 0px 5px;
+}

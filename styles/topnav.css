@@ -1,0 +1,74 @@
+.topmenu{
+	margin: 5px;
+}
+.topmenu ul {
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+}
+.topmenu > li {
+  display: inline-block;
+  margin-right: 5px;
+  position: relative;
+  background: #333;
+}
+
+.topmenu > li:hover{
+	background: #999;
+	transition: 0.1s;
+}
+
+.topmenu > li:hover > a{
+	color: black;
+}
+
+.topmenu > li:last-child {
+  margin-right: 0;
+}
+.topmenu a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  outline: none;
+  font-family: 'Lora', serif;
+  transition: .5s linear;
+}
+.subMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+
+.four .subMenu {
+  -webkit-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background: #555;
+}
+
+.four .subMenu > li{
+	background: #555;
+}
+
+.four .subMenu > li:hover{
+	background: #222;
+}
+
+.four ul li:hover .subMenu {
+  -webkit-transform: scaleY(1);
+  -ms-transform: scaleY(1);
+  transform: scaleY(1);
+}
+.four ul a {
+  color: white;
+}

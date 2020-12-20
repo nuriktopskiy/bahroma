@@ -1,0 +1,38 @@
+.footer{
+	background-color: #333;
+	color: white;
+	padding: 50px 0;
+	z-index: 1;
+}
+
+.footer__top{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-bottom: 50px;
+}
+
+.column{
+	display: flex;
+	flex-direction: column;
+}
+
+.column p{
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+
+.column a{
+	text-decoration: none;
+	color: #999;
+	margin-bottom: 5px;
+	margin-left: 10px;
+}
+
+.footer__contacts p{
+	
+}
+
+.footer__bottom p{
+	text-align: center;
+}
