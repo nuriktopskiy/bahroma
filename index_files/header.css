@@ -21,10 +21,12 @@
 }
 
 .header__logo a{
+	font-family: 'FontsOnline';
 	font-size: 40px;
 	text-decoration: none;
 	color: white;
 	transition: 0.1s;
+	letter-spacing: 5px;
 }
 
 .header__logo a:hover{
@@ -114,4 +116,60 @@ transition: 0.4s;
 	flex-direction: column;
 	align-items: center;
 	font-size: 14px;
+}
+
+.mobileSearch{
+	display: none;
+	height: 0;
+}
+
+@media screen and (max-width: 839px){
+	.header__search{
+		display: none;
+	}
+
+	.header__menu{
+		display: none;
+	}
+
+	.mobileSearch{
+		display: block;
+		box-shadow: 0px 10px 13px -6px rgba(0,0,0,0.75);
+		transition: 0.5s;
+		overflow-y: hidden;
+		background: #555;
+	}
+
+	.mobileSearch input{
+		width: 100%;
+		height: 100%;
+		padding: 7px;
+		background: #555;
+		color: white;
+	}
+
+
+	/* Современные браузеры
+   ----------------------------  */
+.mobileSearch input::placeholder {color: #fffe;}
+
+/* WebKit, Edge
+   ----------------------------  */
+.mobileSearch input::-webkit-input-placeholder {color: #fffe;}
+
+/* Edge
+   ----------------------------  */
+.mobileSearch input::-ms-input-placeholder {color: #fffe;}
+
+/* Firefox 4-18
+   ----------------------------  */
+.mobileSearch input:-moz-placeholder {color: #fffe;opacity: 1;}
+
+/* Firefox 19+
+   ----------------------------  */
+.mobileSearch input::-moz-placeholder {color: #fffe;opacity: 1;}
+
+/* IE 10-11
+   ----------------------------  */
+.mobileSearch input:-ms-input-placeholder {color: #fffe	;}
 }

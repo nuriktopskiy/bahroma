@@ -36,3 +36,40 @@
 .footer__bottom p{
 	text-align: center;
 }
+
+.bottomPanel{
+	display: none;
+}
+
+@media screen and (max-width: 839px){
+
+	.bottomPanel{
+		display: flex;
+		align-items: center;
+		position: fixed;
+		bottom: 0;
+		justify-content: space-around;
+		width: 100%;
+		background-color: #333;
+		padding: 7px;
+		font-size: 24px;
+		z-index: 5;
+	}
+
+	.bottomPanel a{
+		color: white;
+		border-radius: 50%;
+		background-color: #555;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
+	}
+
+	.bottomPanel a:active{
+		background-color: #777;
+	}
+
+}

@@ -167,3 +167,13 @@ border-radius: 50%;
 .addItem .fa{
 	font-size: 50px;
 }
+
+@media screen and (max-width: 839px){
+	.mainContent__filters{
+		width: 90%;
+	}
+
+	.mainContent__sort{
+    	flex-direction: column;
+	}
+}

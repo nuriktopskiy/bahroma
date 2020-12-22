@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="index_files/main.css">
 	<link rel="stylesheet" href="index_files/sidenav.css">
 	<link rel="stylesheet" href="index_files/footer.css">
+	<link rel="stylesheet" href="index_files/fonts.css">
 					<link rel="stylesheet" href="index_files/mainContent.css">
 				<link rel="stylesheet" href="index_files/mainDetailContent.css">
 				<link rel="stylesheet" href="index_files/itemModal.css">
@@ -38,13 +39,17 @@
 			</div>
 		</div>
 	</header>
+	<div class="mobileSearch" id="mobileSearch">
+		<input type="text" placeholder="Что желаем найти?">
+	</div>
 	<div class="wrapper">
 		<div class="topnav__container" id="topnav__container">
 			<nav class="four" id="topnav">
 				<ul class="accordeon"><li><a href="http://shtori/">Главная</a></li><li class="childs">
               <p>Каталог</p><ul class="subMenu" id="subMenu1"><div class="ul__wrap"><li>
-              <a href="http://shtori/pages/about.php?cat=2">Все ткани</a></li><li>
-              <a href="http://shtori/pages/about.php?cat=3">Бархат</a></li><li>
+              <a href="http://shtori/pages/about.php?cat=2">Все ткани</a></li><li class="childs">
+              <p>Бархат</p><ul class="subMenu" id="subMenu3"><div class="ul__wrap"><li>
+              <a href="http://shtori/pages/about.php?cat=10">Подменю</a></li></div></ul></li><li>
               <a href="http://shtori/pages/about.php?cat=4">Блэкаут</a></li><li>
               <a href="http://shtori/pages/about.php?cat=5">Жаккард</a></li><li>
               <a href="http://shtori/pages/about.php?cat=6">Портьера</a></li><li>
@@ -74,117 +79,120 @@
 
 		    <div class="modal-content">
 		      <section class="detailContent">
-		<div class="detailContent__title">
-			<input type="text" placeholder="Введите заголовок*" class="notWidth">
-		</div>
-		<div class="detailContent__art">
-			<input type="text" placeholder="Введите артикул" class="notWidth">
-		</div>
-		<div class="detailContent__container">
-			<div class="detailContent__leftImageBox" id="leftImageBox">
-				<div class="leftImageBox__small">
-					<div class="small__wrap">
-						<div class="small__inputBox">
-							<img id="small__img1" src="index_files/a.html" alt="">
-							<i class="fa fa-plus-circle" aria-hidden="true"></i>
-							<input type="file" placeholder="Задайте значение" name="small-pic1[]" class="small__input" id="inp1">
-						</div>
-						<div class="small__inputBox">
-							<img id="small__img2" src="index_files/a.html" alt="">
-							<i class="fa fa-plus-circle" aria-hidden="true"></i>
-							<input type="file" placeholder="Задайте значение" name="small-pic2[]" class="small__input inp2" id="inp2">
-						</div>
-						<div class="small__inputBox">
-							<img id="small__img3" src="index_files/a.html" alt="">
-							<i class="fa fa-plus-circle" aria-hidden="true"></i>
-							<input type="file" placeholder="Задайте значение" name="small-pic3[]" class="small__input inp3" id="inp3">
-						</div>
-						<div class="small__inputBox">
-							<img id="small__img4" src="index_files/a.html" alt="">
-							<i class="fa fa-plus-circle" aria-hidden="true"></i>
-							<input type="file" placeholder="Задайте значение" name="small-pic4[]" class="small__input" id="inp4">
-						</div>
-					</div>
-				</div>
-				<div class="leftImageBox__big">
-					<div class="big__imgBox">
-						<img id="big__img" src="index_files/a.html" alt="">
+	      	<div class="detailContent__tab">
+			  <button class="detailContent__tablinks" onclick="openCity(event, 'tab1')">1. Создать меню</button>
+			  <button class="detailContent__tablinks" onclick="openCity(event, 'tab2')">2. Создать подменю</button>
+			</div>
+	<div class="detailContent__title">
+		<input type="text" placeholder="Введите заголовок*" class="notWidth">
+	</div>
+	<div class="detailContent__art">
+		<input type="text" placeholder="Введите артикул" class="notWidth">
+	</div>
+	<div class="detailContent__container">
+		<div class="detailContent__leftImageBox" id="leftImageBox">
+			<div class="leftImageBox__small">
+				<div class="small__wrap">
+					<div class="small__inputBox">
+						<img id="small__img1" src="index_files/a.html" alt="">
 						<i class="fa fa-plus-circle" aria-hidden="true"></i>
-						<input type="file" placeholder="Задайте значение" name="big-pic[]" class="photo" id="big__input">
+						<input type="file" placeholder="Задайте значение" name="small-pic1[]" class="small__input" id="inp1">
+					</div>
+					<div class="small__inputBox">
+						<img id="small__img2" src="index_files/a.html" alt="">
+						<i class="fa fa-plus-circle" aria-hidden="true"></i>
+						<input type="file" placeholder="Задайте значение" name="small-pic2[]" class="small__input inp2" id="inp2">
+					</div>
+					<div class="small__inputBox">
+						<img id="small__img3" src="index_files/a.html" alt="">
+						<i class="fa fa-plus-circle" aria-hidden="true"></i>
+						<input type="file" placeholder="Задайте значение" name="small-pic3[]" class="small__input inp3" id="inp3">
+					</div>
+					<div class="small__inputBox">
+						<img id="small__img4" src="index_files/a.html" alt="">
+						<i class="fa fa-plus-circle" aria-hidden="true"></i>
+						<input type="file" placeholder="Задайте значение" name="small-pic4[]" class="small__input" id="inp4">
 					</div>
 				</div>
 			</div>
-
-			<div class="detailContent__rightBox" id="rightBox">
-				<div class="rightBox__price">
-					<input type="text" placeholder="Введите ценник">
-				</div>
-				<!-- <span class="rightBox__oldPrice">
-					<del class="oldPrice__text">
-						123P
-					</del>
-				</span> -->
-				<div class="rightBox__colorBox">
-					<p class="rightBox__color">Цвет:</p>
-					<input type="text" placeholder="Введите цвет">
-				</div>
-				<div class="rightBox__struct">
-					<h1>Состав</h1>
-					<input type="text" placeholder="Введите состав">
-				</div>
-				<div class="rightBox__about">
-					<div class="rightBox__aboutTop">
-						<h1>Описание</h1>
-						<textarea placeholder="Введите описание"></textarea>
-					</div>
-					<div class="rightBox__detail">
-						<div class="rightBox__detailBox">
-							<div class="rightBox__detailTop">
-								<p>Технические особенности</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Материал изделия</p>
-								<div class="dots"></div>
-								<input type="text" placeholder="Задайте значение" class="notWidth">
-							</div>
-						</div>
-						<div class="rightBox__detailBox">
-							<div class="rightBox__detailTop">
-								<p>Дополнительная информация</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Ширина штор</p>
-								<div class="dots"></div>
-								<input type="text" placeholder="Задайте значение" class="notWidth">
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Высота штор</p>
-								<div class="dots"></div>
-								<input type="text" placeholder="Задайте значение" class="notWidth">
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Вес с упаковкой (кг)</p>
-								<div class="dots"></div>
-								<input type="text" placeholder="Задайте значение" class="notWidth">
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Плотность ткани</p>
-								<div class="dots"></div>
-								<input type="text" placeholder="Задайте значение" class="notWidth">
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Высота предмета</p>
-								<div class="dots"></div>
-								<input type="text" placeholder="Задайте значение" class="notWidth">
-							</div>
-						</div>
-					</div>
+			<div class="leftImageBox__big">
+				<div class="big__imgBox">
+					<img id="big__img" src="index_files/a.html" alt="">
+					<i class="fa fa-plus-circle" aria-hidden="true"></i>
+					<input type="file" placeholder="Задайте значение" name="big-pic[]" class="photo" id="big__input">
 				</div>
 			</div>
-
 		</div>
-	</section>
-		    </div><!-- content -->
+
+		<div class="detailContent__rightBox" id="rightBox">
+			<div class="rightBox__price">
+				<input type="text" placeholder="Введите ценник">
+			</div>
+			<!-- <span class="rightBox__oldPrice">
+				<del class="oldPrice__text">
+					123P
+				</del>
+			</span> -->
+			<div class="rightBox__colorBox">
+				<p class="rightBox__color">Цвет:</p>
+				<input type="text" placeholder="Введите цвет">
+			</div>
+			<div class="rightBox__struct">
+				<h1>Состав</h1>
+				<input type="text" placeholder="Введите состав">
+			</div>
+			<div class="rightBox__about">
+				<div class="rightBox__aboutTop">
+					<h1>Описание</h1>
+					<textarea placeholder="Введите описание"></textarea>
+				</div>
+				<div class="rightBox__detail">
+					<div class="rightBox__detailBox">
+						<div class="rightBox__detailTop">
+							<p>Технические особенности</p>
+						</div>
+						<div class="rightBox__detailItem">
+							<p>Материал изделия</p>
+							<div class="dots"></div>
+							<input type="text" placeholder="Задайте значение" class="notWidth">
+						</div>
+					</div>
+					<div class="rightBox__detailBox">
+						<div class="rightBox__detailTop">
+							<p>Дополнительная информация</p>
+						</div>
+						<div class="rightBox__detailItem">
+							<p>Ширина штор</p>
+							<div class="dots"></div>
+							<input type="text" placeholder="Задайте значение" class="notWidth">
+						</div>
+						<div class="rightBox__detailItem">
+							<p>Высота штор</p>
+							<div class="dots"></div>
+							<input type="text" placeholder="Задайте значение" class="notWidth">
+						</div>
+						<div class="rightBox__detailItem">
+							<p>Вес с упаковкой (кг)</p>
+							<div class="dots"></div>
+							<input type="text" placeholder="Задайте значение" class="notWidth">
+						</div>
+						<div class="rightBox__detailItem">
+							<p>Плотность ткани</p>
+							<div class="dots"></div>
+							<input type="text" placeholder="Задайте значение" class="notWidth">
+						</div>
+						<div class="rightBox__detailItem">
+							<p>Высота предмета</p>
+							<div class="dots"></div>
+							<input type="text" placeholder="Задайте значение" class="notWidth">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</section>		    </div><!-- content -->
 		    
 		  </div><!-- modal -->
 		</div><!-- overlay -->
@@ -194,11 +202,13 @@
 				<h1>Все ткани (10)</h1>
 				<div class="mainContent__sort">
 					<p class="sort__by">Сортировать по:</p>
-					<a href="#">цене</a>
-					<span>/</span>
-					<a href="#">дате обновления</a>
-					<span>/</span>
-					<a href="#">скидке</a>
+					<div class="mainContent__a">
+						<a href="#">цене</a>
+						<span>/</span>
+						<a href="#">дате обновления</a>
+						<span>/</span>
+						<a href="#">скидке</a>
+					</div>
 				</div>
 			</div>
 			<div class="mainContent__container">
@@ -501,6 +511,15 @@
 	<script src="index_files/itemModal.js"></script>
 	<script src="index_files/inputImage.js"></script>
 	<script src="index_files/jquery-3.js"></script>
+<div class="bottomPanel">
+	<a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+	<a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+	<a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+	<a href="#" class="bottomPanel__search" id="bottomPanel__search" onclick="openSearch();"><i class="fa fa-search" aria-hidden="true"></i></a>
+	<a class="bottomPanel__menu" id="bottomPanel__menu" onclick="openMobileMenu();"><i class="fa fa-bars" aria-hidden="true"></i></a>
+</div>
+<script src="index_files/open-mobile-menu.js"></script>
+<script src="index_files/mobile-search.js"></script>
 <footer class="footer" id="footer">
 	<div class="footer__top">
 		<div class="footer__contacts column">

@@ -147,25 +147,31 @@
 
 @media screen and (max-width: 1024px) {
 	#topnav{
-		display: none;
 		background: rgba(0, 0, 0, 0.9);
 		height: 100%;
-		width: 230px;
+		width: 0;
 		position: fixed;
 		top: 0;
 		left: 0;
 		overflow-y: scroll;
 		z-index: 1;
+		transition: 0.5s;
 	}
 
 	#topnav .accordeon{
 		border: none;
 		margin-top: 40px;
 		background-color: unset;
+		flex-direction: column;
 	}
 
 	#topnav ul li:hover > a:not(.drop){
 		background-color: unset;
+	}
+
+	#topnav ul li{
+		width: 100%;
+		border-right: none!important;
 	}
 
 	#topnav ul li ul{
@@ -225,5 +231,10 @@
 		-webkit-transition: 0.2s;
 		-o-transition: 0.2s;
 		transition: 0.2s;
+	}
+
+	.topnav__container{
+		border-bottom: none;
+		z-index: 6;
 	}
 }
