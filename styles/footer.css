@@ -43,6 +43,32 @@
 
 @media screen and (max-width: 839px){
 
+	.footer{
+		padding: 35px 0;
+		padding-bottom: 89px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.footer__top{
+		justify-content: normal;
+		margin-bottom: 0;
+		flex-wrap: wrap;
+	}
+
+	.footer__bottom{
+		margin-top: 20px;
+	}
+
+	.footer__contacts{
+		flex-grow: 1;
+	}
+
+	.column{
+		margin: 10px;
+	}
+
 	.bottomPanel{
 		display: flex;
 		align-items: center;
