@@ -4,7 +4,7 @@ function openSearch() {
     
     if (x.className === "bottomPanel__search") {
         x.className += " open";
-        c.style.height = "35px";
+        c.style.height = "37px";
     } else {
         x.className = "bottomPanel__search";
         c.style.height = "0";

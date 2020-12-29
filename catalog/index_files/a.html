@@ -13,7 +13,6 @@
 					<link rel="stylesheet" href="/styles/mainContent.css">
 				<link rel="stylesheet" href="/styles/mainDetailContent.css">
 				<link rel="stylesheet" href="/styles/itemModal.css">
-				<!-- <link rel="stylesheet" href="/styles/mainSlides.css"> -->
 				<title>Document</title>
 </head>
 <body>
@@ -42,21 +41,23 @@
 	</header>
 	<div class="mobileSearch" id="mobileSearch">
 		<input type="text" placeholder="Что желаем найти?">
+		<i class="fa fa-search" aria-hidden="true"></i>
 	</div>
 	<div class="wrapper">
 		<div class="topnav__container" id="topnav__container">
 			<nav class="four" id="topnav">
 				<ul class="accordeon"><li><a href="/">Главная</a></li><li class="childs">
-              <p>Каталог</p><ul class="subMenu" id="subMenu1"><div class="ul__wrap"><li>
-              <a href="/pages/about.php?cat=2">Все ткани</a></li><li class="childs">
-              <p>Бархат</p><ul class="subMenu" id="subMenu3"><div class="ul__wrap"><li>
-              <a href="/pages/about.php?cat=10">Подменю</a></li></div></ul></li><li>
-              <a href="/pages/about.php?cat=4">Блэкаут</a></li><li>
-              <a href="/pages/about.php?cat=5">Жаккард</a></li><li>
-              <a href="/pages/about.php?cat=6">Портьера</a></li><li>
-              <a href="/pages/about.php?cat=7">Тафта</a></li><li>
-              <a href="/pages/about.php?cat=8">Лён</a></li><li>
-              <a href="/pages/about.php?cat=9">Тюль</a></li></div></ul></li><li><a href="/">Контакты</a></li><li><a href="/"><i class="fa fa-plus-circle addItemMenu" aria-hidden="true"></i>Добавить</a><ul class="subMenu"><div class="ul__wrap"><li class="childs"><a href="/">Добавить подменю</a></li></div></ul></li></ul>			</nav>
+              <a href="/catalog">Каталог</a><a class="drop"></a><ul class="subMenu" id="subMenu1"><div class="ul__wrap"><li class="childs">
+              <a href="/catalog?=3">Бархат</a><a class="drop"></a><ul class="subMenu" id="subMenu3"><div class="ul__wrap"><li>
+              <a href="/catalog?=10">Подменю</a></li><li>
+              <a href="/catalog?=12">Подменю 2</a></li></div></ul></li><li>
+              <a href="/catalog?=4">Блэкаут</a></li><li>
+              <a href="/catalog?=5">Жаккард</a></li><li>
+              <a href="/catalog?=6">Портьера</a></li><li>
+              <a href="/catalog?=7">Тафта</a></li><li>
+              <a href="/catalog?=8">Лён</a></li><li>
+              <a href="/catalog?=9">Тюль</a></li></div></ul></li><li>
+              <a href="/contacts">Контакты</a></li><li><a href="/" class="accordeon__add"><i class="fa fa-plus-circle addItemMenu" aria-hidden="true"></i>Добавить</a><ul class="subMenu"><div class="ul__wrap"><li class="childs"><a href="/">Добавить подменю</a></li></div></ul></li></ul>			</nav>
 		</div>
 		<!-- <section class="mainSlides">
 			<div class="mainSlides__wrapper">
@@ -198,6 +199,14 @@
 		  </div><!-- modal -->
 		</div><!-- overlay -->
 
+		<section class="slideShow">
+			<div class="sideShow__box">
+				<div class="slideShow__picture">
+					<img src="" alt="">
+				</div>
+			</div>
+		</section>
+
 		<section class="mainContent">
 			<div class="mainContent__filters">
 				<h1>Все ткани (10)</h1>
@@ -223,10 +232,10 @@
 				</div>
 
 				<div class="mainContent__box">
-					<a href="#" class="mainContent__click">	<!-- Ссылка на товар -->
+					<a href="/catalog/detail/" class="mainContent__click">	<!-- Ссылка на товар -->
 					<div class="mainContent">
 						<div class="mainContent__image">
-							<img src="images/12005147-1.jpg" alt="">
+							<img src="/images/12005147-1.jpg" alt="">
 						</div>
 						<div class="mainContent__footer">
 							<div class="mainContent__price">
@@ -239,14 +248,15 @@
 					</a> 									<!-- Конец ссылки -->
 						<div class="boxCart">
 							<a href="#" class="boxCart__link">В корзину</a>
-							<a href="#" class="boxCart__link"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+							<a href="#" class="boxCart__link mobile"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+							<a href="#" class="boxCart__link fav"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
 						</div>
 					</div>
 					<div class="box__more">
 						<div class="mainContent__preview">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
 						</div>
 					</div>
 				</div>
@@ -254,10 +264,10 @@
 
 
 				<div class="mainContent__box">
-					<a href="#" class="mainContent__click">	<!-- Ссылка на товар -->
+					<a href="/catalog/detail/" class="mainContent__click">	<!-- Ссылка на товар -->
 					<div class="mainContent">
 						<div class="mainContent__image">
-							<img src="images/12005147-1.jpg" alt="">
+							<img src="/images/12005147-1.jpg" alt="">
 						</div>
 						<div class="mainContent__footer">
 							<div class="mainContent__price">
@@ -270,14 +280,15 @@
 					</a> 									<!-- Конец ссылки -->
 						<div class="boxCart">
 							<a href="#" class="boxCart__link">В корзину</a>
-							<a href="#" class="boxCart__link"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+							<a href="#" class="boxCart__link mobile"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+							<a href="#" class="boxCart__link fav"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
 						</div>
 					</div>
 					<div class="box__more">
 						<div class="mainContent__preview">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
 						</div>
 					</div>
 				</div>
@@ -285,10 +296,10 @@
 
 
 				<div class="mainContent__box">
-					<a href="#" class="mainContent__click">	<!-- Ссылка на товар -->
+					<a href="/catalog/detail/" class="mainContent__click">	<!-- Ссылка на товар -->
 					<div class="mainContent">
 						<div class="mainContent__image">
-							<img src="images/12005147-1.jpg" alt="">
+							<img src="/images/12005147-1.jpg" alt="">
 						</div>
 						<div class="mainContent__footer">
 							<div class="mainContent__price">
@@ -301,46 +312,15 @@
 					</a> 									<!-- Конец ссылки -->
 						<div class="boxCart">
 							<a href="#" class="boxCart__link">В корзину</a>
-							<a href="#" class="boxCart__link"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+							<a href="#" class="boxCart__link mobile"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+							<a href="#" class="boxCart__link fav"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
 						</div>
 					</div>
 					<div class="box__more">
 						<div class="mainContent__preview">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
-						</div>
-					</div>
-				</div>
-
-
-
-
-				<div class="mainContent__box">
-					<a href="#" class="mainContent__click">	<!-- Ссылка на товар -->
-					<div class="mainContent">
-						<div class="mainContent__image">
-							<img src="images/12005147-1.jpg" alt="">
-						</div>
-						<div class="mainContent__footer">
-							<div class="mainContent__price">
-								<strong>5000p</strong>
-							</div>
-							<div class="mainContent__about">
-								<span>Название</span>
-							</div>
-						</div>
-					</a> 									<!-- Конец ссылки -->
-						<div class="boxCart">
-							<a href="#" class="boxCart__link">В корзину</a>
-							<a href="#" class="boxCart__link"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-						</div>
-					</div>
-					<div class="box__more">
-						<div class="mainContent__preview">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
 						</div>
 					</div>
 				</div>
@@ -349,10 +329,10 @@
 
 
 				<div class="mainContent__box">
-					<a href="#" class="mainContent__click">	<!-- Ссылка на товар -->
+					<a href="/catalog/detail/" class="mainContent__click">	<!-- Ссылка на товар -->
 					<div class="mainContent">
 						<div class="mainContent__image">
-							<img src="images/12005147-1.jpg" alt="">
+							<img src="/images/12005147-1.jpg" alt="">
 						</div>
 						<div class="mainContent__footer">
 							<div class="mainContent__price">
@@ -365,45 +345,15 @@
 					</a> 									<!-- Конец ссылки -->
 						<div class="boxCart">
 							<a href="#" class="boxCart__link">В корзину</a>
-							<a href="#" class="boxCart__link"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+							<a href="#" class="boxCart__link mobile"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+							<a href="#" class="boxCart__link fav"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
 						</div>
 					</div>
 					<div class="box__more">
 						<div class="mainContent__preview">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
-						</div>
-					</div>
-				</div>
-
-
-
-				<div class="mainContent__box">
-					<a href="#" class="mainContent__click">	<!-- Ссылка на товар -->
-					<div class="mainContent">
-						<div class="mainContent__image">
-							<img src="images/12005147-1.jpg" alt="">
-						</div>
-						<div class="mainContent__footer">
-							<div class="mainContent__price">
-								<strong>5000p</strong>
-							</div>
-							<div class="mainContent__about">
-								<span>Название</span>
-							</div>
-						</div>
-					</a> 									<!-- Конец ссылки -->
-						<div class="boxCart">
-							<a href="#" class="boxCart__link">В корзину</a>
-							<a href="#" class="boxCart__link"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-						</div>
-					</div>
-					<div class="box__more">
-						<div class="mainContent__preview">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
 						</div>
 					</div>
 				</div>
@@ -412,10 +362,10 @@
 
 
 				<div class="mainContent__box">
-					<a href="#" class="mainContent__click">	<!-- Ссылка на товар -->
+					<a href="/catalog/detail/" class="mainContent__click">	<!-- Ссылка на товар -->
 					<div class="mainContent">
 						<div class="mainContent__image">
-							<img src="images/12005147-1.jpg" alt="">
+							<img src="/images/12005147-1.jpg" alt="">
 						</div>
 						<div class="mainContent__footer">
 							<div class="mainContent__price">
@@ -428,14 +378,15 @@
 					</a> 									<!-- Конец ссылки -->
 						<div class="boxCart">
 							<a href="#" class="boxCart__link">В корзину</a>
-							<a href="#" class="boxCart__link"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+							<a href="#" class="boxCart__link mobile"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+							<a href="#" class="boxCart__link fav"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
 						</div>
 					</div>
 					<div class="box__more">
 						<div class="mainContent__preview">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
 						</div>
 					</div>
 				</div>
@@ -443,10 +394,10 @@
 
 
 				<div class="mainContent__box">
-					<a href="#" class="mainContent__click">	<!-- Ссылка на товар -->
+					<a href="/catalog/detail/" class="mainContent__click">	<!-- Ссылка на товар -->
 					<div class="mainContent">
 						<div class="mainContent__image">
-							<img src="images/12005147-1.jpg" alt="">
+							<img src="/images/12005147-1.jpg" alt="">
 						</div>
 						<div class="mainContent__footer">
 							<div class="mainContent__price">
@@ -459,14 +410,15 @@
 					</a> 									<!-- Конец ссылки -->
 						<div class="boxCart">
 							<a href="#" class="boxCart__link">В корзину</a>
-							<a href="#" class="boxCart__link"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+							<a href="#" class="boxCart__link mobile"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+							<a href="#" class="boxCart__link fav"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
 						</div>
 					</div>
 					<div class="box__more">
 						<div class="mainContent__preview">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
 						</div>
 					</div>
 				</div>
@@ -475,10 +427,10 @@
 
 
 				<div class="mainContent__box">
-					<a href="#" class="mainContent__click">	<!-- Ссылка на товар -->
+					<a href="/catalog/detail/" class="mainContent__click">	<!-- Ссылка на товар -->
 					<div class="mainContent">
 						<div class="mainContent__image">
-							<img src="images/12005147-1.jpg" alt="">
+							<img src="/images/12005147-1.jpg" alt="">
 						</div>
 						<div class="mainContent__footer">
 							<div class="mainContent__price">
@@ -491,14 +443,80 @@
 					</a> 									<!-- Конец ссылки -->
 						<div class="boxCart">
 							<a href="#" class="boxCart__link">В корзину</a>
-							<a href="#" class="boxCart__link"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+							<a href="#" class="boxCart__link mobile"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+							<a href="#" class="boxCart__link fav"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
 						</div>
 					</div>
 					<div class="box__more">
 						<div class="mainContent__preview">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
-							<img class="preview__img" src="images/12005147-1.jpg" alt="">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="mainContent__box">
+					<a href="/catalog/detail/" class="mainContent__click">	<!-- Ссылка на товар -->
+					<div class="mainContent">
+						<div class="mainContent__image">
+							<img src="/images/12005147-1.jpg" alt="">
+						</div>
+						<div class="mainContent__footer">
+							<div class="mainContent__price">
+								<strong>5000p</strong>
+							</div>
+							<div class="mainContent__about">
+								<span>Название</span>
+							</div>
+						</div>
+					</a> 									<!-- Конец ссылки -->
+						<div class="boxCart">
+							<a href="#" class="boxCart__link">В корзину</a>
+							<a href="#" class="boxCart__link mobile"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+							<a href="#" class="boxCart__link fav"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+						</div>
+					</div>
+					<div class="box__more">
+						<div class="mainContent__preview">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
+						</div>
+					</div>
+				</div>
+
+
+
+
+				<div class="mainContent__box">
+					<a href="/catalog/detail/" class="mainContent__click">	<!-- Ссылка на товар -->
+					<div class="mainContent">
+						<div class="mainContent__image">
+							<img src="/images/12005147-1.jpg" alt="">
+						</div>
+						<div class="mainContent__footer">
+							<div class="mainContent__price">
+								<strong>5000p</strong>
+							</div>
+							<div class="mainContent__about">
+								<span>Название</span>
+							</div>
+						</div>
+					</a> 									<!-- Конец ссылки -->
+						<div class="boxCart">
+							<a href="#" class="boxCart__link">В корзину</a>
+							<a href="#" class="boxCart__link mobile"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+							<a href="#" class="boxCart__link fav"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+						</div>
+					</div>
+					<div class="box__more">
+						<div class="mainContent__preview">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
+							<img class="preview__img" src="/images/12005147-1.jpg" alt="">
 						</div>
 					</div>
 				</div>

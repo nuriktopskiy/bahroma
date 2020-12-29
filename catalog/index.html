@@ -4,18 +4,20 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="index_files/header.css">
-	<link rel="stylesheet" href="index_files/main.css">
-	<link rel="stylesheet" href="index_files/sidenav.css">
-	<link rel="stylesheet" href="index_files/footer.css">
-	<link rel="stylesheet" href="index_files/fonts.css">
-	<link rel="stylesheet" href="index_files/detailContent.css">
-	<title>Document</title>
+	<link rel="stylesheet" href="../styles/header.css">
+	<link rel="stylesheet" href="../styles/main.css">
+	<link rel="stylesheet" href="../styles/sidenav.css">
+	<link rel="stylesheet" href="../styles/footer.css">
+	<link rel="stylesheet" href="../styles/fonts.css">
+					<link rel="stylesheet" href="../styles/mainContent.css">
+				<link rel="stylesheet" href="../styles/mainDetailContent.css">
+				<link rel="stylesheet" href="../styles/itemModal.css">
+				<title>Document</title>
 </head>
 <body>
 	<header class="header" id="header">
 		<div class="header__logo">
-			<a href="/bahroma/">Бахрома</a>
+			<a href="/">Бахрома</a>
 		</div>
 		<div class="header__search">
 			<input type="text" placeholder="Что желаем найти?">
@@ -38,21 +40,23 @@
 	</header>
 	<div class="mobileSearch" id="mobileSearch">
 		<input type="text" placeholder="Что желаем найти?">
+		<i class="fa fa-search" aria-hidden="true"></i>
 	</div>
 	<div class="wrapper">
 		<div class="topnav__container" id="topnav__container">
-			<nav class="four" id="topnav" style="width: 0px;">
-				<ul class="accordeon"><li><a href="http://shtori/">Главная</a></li><li class="childs">
-              <p>Каталог</p><ul class="subMenu" id="subMenu1"><div class="ul__wrap"><li>
-              <a href="http://shtori/pages/about.php?cat=2">Все ткани</a></li><li class="childs">
-              <p>Бархат</p><ul class="subMenu" id="subMenu3"><div class="ul__wrap"><li>
-              <a href="http://shtori/pages/about.php?cat=10">Подменю</a></li></div></ul></li><li>
-              <a href="http://shtori/pages/about.php?cat=4">Блэкаут</a></li><li>
-              <a href="http://shtori/pages/about.php?cat=5">Жаккард</a></li><li>
-              <a href="http://shtori/pages/about.php?cat=6">Портьера</a></li><li>
-              <a href="http://shtori/pages/about.php?cat=7">Тафта</a></li><li>
-              <a href="http://shtori/pages/about.php?cat=8">Лён</a></li><li>
-              <a href="http://shtori/pages/about.php?cat=9">Тюль</a></li></div></ul></li><li><a href="http://shtori/">Контакты</a></li><li><a href="http://shtori/"><i class="fa fa-plus-circle addItemMenu" aria-hidden="true"></i>Добавить</a><ul class="subMenu"><div class="ul__wrap"><li class="childs"><a href="http://shtori/">Добавить подменю</a></li></div></ul></li></ul>			</nav>
+			<nav class="four" id="topnav">
+				<ul class="accordeon"><li><a href="../index.html">Главная</a></li><li class="childs">
+              <a href="#">Каталог</a><a class="drop"></a><ul class="subMenu" id="subMenu1"><div class="ul__wrap"><li class="childs">
+              <a href="#">Бархат</a><a class="drop"></a><ul class="subMenu" id="subMenu3"><div class="ul__wrap"><li>
+              <a href="#">Подменю</a></li><li>
+              <a href="#">Подменю 2</a></li></div></ul></li><li>
+              <a href="#">Блэкаут</a></li><li>
+              <a href="#">Жаккард</a></li><li>
+              <a href="#">Портьера</a></li><li>
+              <a href="#">Тафта</a></li><li>
+              <a href="#">Лён</a></li><li>
+              <a href="#">Тюль</a></li></div></ul></li><li>
+              <a href="#">Контакты</a></li><li><a href="#" class="accordeon__add"><i class="fa fa-plus-circle addItemMenu" aria-hidden="true"></i>Добавить</a><ul class="subMenu"><div class="ul__wrap"><li class="childs"><a href="#">Добавить подменю</a></li></div></ul></li></ul>			</nav>
 		</div>
 		<!-- <section class="mainSlides">
 			<div class="mainSlides__wrapper">
@@ -63,228 +67,468 @@
 				</div>
 			</div>
 		</section> -->
-<main id="main">
-	<script src="index_files/jquery-3.js"></script>
-	<section class="detailContent">
-		<div class="detailContent__wrapper">
-		<div class="detailContent__container">
-			<div class="detailContent__title">
-			<h1>Заголовок </h1>
-		</div>
-		<div class="detailContent__art">
-			Артикул:
-			<span>1234567</span>
-		</div>
-			<div class="detailContent__leftImageBox" id="leftImageBox">
-				<div class="leftImageBox__small">
-					<img src="index_files/12005147-1.jpg" alt="">
-					<img src="index_files/12005147-1.jpg" alt="">
-					<img src="index_files/12005147-1.jpg" alt="">
-				</div>
-				<div class="leftImageBox__big">
-					<img src="index_files/12005147-1.jpg" alt="">
-				</div>
-			</div>
+	<main>
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<div class="modal-overlay" id="modal-overlay">
+		  <div class="modal" id="modal">
+		    
+		    <a class="close-modal" onclick="closeModal();">
+		      <svg viewBox="0 0 20 20">
+		        <path fill="#000000" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
+		      </svg>
+		    </a><!-- close modal -->
 
-			<div class="detailContent__rightBox" id="rightBox">
-				<div class="rightBox__top">
-					<div class="rightBox__price">
-						<strong>495p</strong>
-					</div>
-					<!-- <span class="rightBox__oldPrice">
-						<del class="oldPrice__text">
-							123P
-						</del>
-					</span> -->
-					<div class="rightBox__colorBox">
-						<p class="rightBox__color">Цвет:</p>
-						<p>белый</p>
-					</div>
-					<div class="rightBox__addCart">
-						<a href="#" class="rightBox__addToCart">Добавить в корзину</a>
-						<a href="#" class="rightBox__addToFav"><i class="fa fa-heart-o" aria-hidden="true"></i> В избранное</a>
-					</div>
-				</div>
-				<div class="rightBox__struct">
-					<h1>Состав</h1>
-					<p>Полиэстер 100%</p>
-				</div>
-				<div class="rightBox__about">
-					<div class="rightBox__aboutTop">
-						<h1>Описание</h1>
-						<p>Тюль белый, прозрачный, размер 280*260, 100 % полиэстер.</p>
-					</div>
-					<div class="rightBox__detail">
-						<div class="rightBox__detailBox">
-							<div class="rightBox__detailTop">
-								<p>Технические особенности</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Материал изделия</p>
-								<div class="dots"></div>
-								<p>полиэстер</p>
-							</div>
-						</div>
-						<div class="rightBox__detailBox">
-							<div class="rightBox__detailTop">
-								<p>Дополнительная информация</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Ширина штор</p>
-								<div class="dots"></div>
-								<p>270-280 см</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Высота штор</p>
-								<div class="dots"></div>
-								<p>270-280 см</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Вес с упаковкой (кг)</p>
-								<div class="dots"></div>
-								<p>270-280 см</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Плотность ткани</p>
-								<div class="dots"></div>
-								<p>270-280 см</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Высота предмета</p>
-								<div class="dots"></div>
-								<p>270-280 см</p>
-							</div>
-						</div>
-						<div class="rightBox__detailBox">
-							<div class="rightBox__detailTop">
-								<p>Дополнительная информация</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Ширина штор</p>
-								<div class="dots"></div>
-								<p>270-280 см</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Высота штор</p>
-								<div class="dots"></div>
-								<p>270-280 см</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Вес с упаковкой (кг)</p>
-								<div class="dots"></div>
-								<p>270-280 см</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Плотность ткани</p>
-								<div class="dots"></div>
-								<p>270-280 см</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Высота предмета</p>
-								<div class="dots"></div>
-								<p>270-280 см</p>
-							</div>
-						</div>
-						<div class="rightBox__detailBox">
-							<div class="rightBox__detailTop">
-								<p>Дополнительная информация</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Ширина штор</p>
-								<div class="dots"></div>
-								<p>270-280 см</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Высота штор</p>
-								<div class="dots"></div>
-								<p>270-280 см</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Вес с упаковкой (кг)</p>
-								<div class="dots"></div>
-								<p>270-280 см</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Плотность ткани</p>
-								<div class="dots"></div>
-								<p>270-280 см</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Высота предмета</p>
-								<div class="dots"></div>
-								<p>270-280 см</p>
-							</div>
-						</div>
-						<div class="rightBox__detailBox">
-							<div class="rightBox__detailTop">
-								<p>Дополнительная информация</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Ширина штор</p>
-								<div class="dots"></div>
-								<p>270-280 см</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Высота штор</p>
-								<div class="dots"></div>
-								<p>270-280 см</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Вес с упаковкой (кг)</p>
-								<div class="dots"></div>
-								<p>270-280 см</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Плотность ткани</p>
-								<div class="dots"></div>
-								<p>270-280 см</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Высота предмета</p>
-								<div class="dots"></div>
-								<p>270-280 см</p>
-							</div>
-						</div>
-						<div class="rightBox__detailBox">
-							<div class="rightBox__detailTop">
-								<p>Дополнительная информация</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Ширина штор</p>
-								<div class="dots"></div>
-								<p>270-280 см</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Высота штор</p>
-								<div class="dots"></div>
-								<p>270-280 см</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Вес с упаковкой (кг)</p>
-								<div class="dots"></div>
-								<p>270-280 см</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Плотность ткани</p>
-								<div class="dots"></div>
-								<p>270-280 см</p>
-							</div>
-							<div class="rightBox__detailItem">
-								<p>Высота предмета</p>
-								<div class="dots"></div>
-								<p>270-280 см</p>
-							</div>
-						</div>
-					</div>
-				</div>
+		    <div class="modal-content">
+		      <section class="detailContent">
+	      	<div class="detailContent__tab">
+			  <button class="detailContent__tablinks" onclick="openCity(event, 'tab1')">1. Создать меню</button>
+			  <button class="detailContent__tablinks" onclick="openCity(event, 'tab2')">2. Создать подменю</button>
 			</div>
-
-		</div>
+	<div class="detailContent__title">
+		<input type="text" placeholder="Введите заголовок*" class="notWidth">
 	</div>
-	</section>
-</main>
-<script src="index_files/header.js"></script>
+	<div class="detailContent__art">
+		<input type="text" placeholder="Введите артикул" class="notWidth">
+	</div>
+	<div class="detailContent__container">
+		<div class="detailContent__leftImageBox" id="leftImageBox">
+			<div class="leftImageBox__small">
+				<div class="small__wrap">
+					<div class="small__inputBox">
+						<img id="small__img1" src="index_files/a.html" alt="">
+						<i class="fa fa-plus-circle" aria-hidden="true"></i>
+						<input type="file" placeholder="Задайте значение" name="small-pic1[]" class="small__input" id="inp1">
+					</div>
+					<div class="small__inputBox">
+						<img id="small__img2" src="index_files/a.html" alt="">
+						<i class="fa fa-plus-circle" aria-hidden="true"></i>
+						<input type="file" placeholder="Задайте значение" name="small-pic2[]" class="small__input inp2" id="inp2">
+					</div>
+					<div class="small__inputBox">
+						<img id="small__img3" src="index_files/a.html" alt="">
+						<i class="fa fa-plus-circle" aria-hidden="true"></i>
+						<input type="file" placeholder="Задайте значение" name="small-pic3[]" class="small__input inp3" id="inp3">
+					</div>
+					<div class="small__inputBox">
+						<img id="small__img4" src="index_files/a.html" alt="">
+						<i class="fa fa-plus-circle" aria-hidden="true"></i>
+						<input type="file" placeholder="Задайте значение" name="small-pic4[]" class="small__input" id="inp4">
+					</div>
+				</div>
+			</div>
+			<div class="leftImageBox__big">
+				<div class="big__imgBox">
+					<img id="big__img" src="index_files/a.html" alt="">
+					<i class="fa fa-plus-circle" aria-hidden="true"></i>
+					<input type="file" placeholder="Задайте значение" name="big-pic[]" class="photo" id="big__input">
+				</div>
+			</div>
+		</div>
 
+		<div class="detailContent__rightBox" id="rightBox">
+			<div class="rightBox__price">
+				<input type="text" placeholder="Введите ценник">
+			</div>
+			<!-- <span class="rightBox__oldPrice">
+				<del class="oldPrice__text">
+					123P
+				</del>
+			</span> -->
+			<div class="rightBox__colorBox">
+				<p class="rightBox__color">Цвет:</p>
+				<input type="text" placeholder="Введите цвет">
+			</div>
+			<div class="rightBox__struct">
+				<h1>Состав</h1>
+				<input type="text" placeholder="Введите состав">
+			</div>
+			<div class="rightBox__about">
+				<div class="rightBox__aboutTop">
+					<h1>Описание</h1>
+					<textarea placeholder="Введите описание"></textarea>
+				</div>
+				<div class="rightBox__detail">
+					<div class="rightBox__detailBox">
+						<div class="rightBox__detailTop">
+							<p>Технические особенности</p>
+						</div>
+						<div class="rightBox__detailItem">
+							<p>Материал изделия</p>
+							<div class="dots"></div>
+							<input type="text" placeholder="Задайте значение" class="notWidth">
+						</div>
+					</div>
+					<div class="rightBox__detailBox">
+						<div class="rightBox__detailTop">
+							<p>Дополнительная информация</p>
+						</div>
+						<div class="rightBox__detailItem">
+							<p>Ширина штор</p>
+							<div class="dots"></div>
+							<input type="text" placeholder="Задайте значение" class="notWidth">
+						</div>
+						<div class="rightBox__detailItem">
+							<p>Высота штор</p>
+							<div class="dots"></div>
+							<input type="text" placeholder="Задайте значение" class="notWidth">
+						</div>
+						<div class="rightBox__detailItem">
+							<p>Вес с упаковкой (кг)</p>
+							<div class="dots"></div>
+							<input type="text" placeholder="Задайте значение" class="notWidth">
+						</div>
+						<div class="rightBox__detailItem">
+							<p>Плотность ткани</p>
+							<div class="dots"></div>
+							<input type="text" placeholder="Задайте значение" class="notWidth">
+						</div>
+						<div class="rightBox__detailItem">
+							<p>Высота предмета</p>
+							<div class="dots"></div>
+							<input type="text" placeholder="Задайте значение" class="notWidth">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</section>		    </div><!-- content -->
+		    
+		  </div><!-- modal -->
+		</div><!-- overlay -->
+
+		<section class="slideShow">
+			<div class="sideShow__box">
+				<div class="slideShow__picture">
+					<img src="" alt="">
+				</div>
+			</div>
+		</section>
+
+		<section class="mainContent">
+			<div class="mainContent__filters">
+				<h1>Все ткани (10)</h1>
+				<div class="mainContent__sort">
+					<p class="sort__by">Сортировать по:</p>
+					<div class="mainContent__a">
+						<a href="#">цене</a>
+						<span>/</span>
+						<a href="#">дате обновления</a>
+						<span>/</span>
+						<a href="#">скидке</a>
+					</div>
+				</div>
+			</div>
+			<div class="mainContent__container">
+
+				<div class="mainContent__box addItem">
+					<a href="#" class="addItem__button" onclick="openModal();">
+						<span class="addItem__circle">
+							<i class="fa fa-plus" aria-hidden="true"></i>
+						</span>
+					</a>
+				</div>
+
+				<div class="mainContent__box">
+					<a href="detail/index.html" class="mainContent__click">	<!-- Ссылка на товар -->
+					</a><div class="mainContent"><a href="detail/index.html" class="mainContent__click">
+						<div class="mainContent__image">
+							<img src="index_files/12005147-1.jpg" alt="">
+						</div>
+						<div class="mainContent__footer">
+							<div class="mainContent__price">
+								<strong>5000p</strong>
+							</div>
+							<div class="mainContent__about">
+								<span>Название</span>
+							</div>
+						</div>
+					</a> 									<!-- Конец ссылки -->
+						<div class="boxCart">
+							<a href="#" class="boxCart__link">В корзину</a>
+							<a href="#" class="boxCart__link mobile"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+							<a href="#" class="boxCart__link fav"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+						</div>
+					</div>
+					<div class="box__more">
+						<div class="mainContent__preview">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="mainContent__box">
+					<a href="detail/index.html" class="mainContent__click">	<!-- Ссылка на товар -->
+					</a><div class="mainContent"><a href="detail/index.html" class="mainContent__click">
+						<div class="mainContent__image">
+							<img src="index_files/12005147-1.jpg" alt="">
+						</div>
+						<div class="mainContent__footer">
+							<div class="mainContent__price">
+								<strong>5000p</strong>
+							</div>
+							<div class="mainContent__about">
+								<span>Название</span>
+							</div>
+						</div>
+					</a> 									<!-- Конец ссылки -->
+						<div class="boxCart">
+							<a href="#" class="boxCart__link">В корзину</a>
+							<a href="#" class="boxCart__link mobile"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+							<a href="#" class="boxCart__link fav"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+						</div>
+					</div>
+					<div class="box__more">
+						<div class="mainContent__preview">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="mainContent__box">
+					<a href="detail/index.html" class="mainContent__click">	<!-- Ссылка на товар -->
+					</a><div class="mainContent"><a href="detail/index.html" class="mainContent__click">
+						<div class="mainContent__image">
+							<img src="index_files/12005147-1.jpg" alt="">
+						</div>
+						<div class="mainContent__footer">
+							<div class="mainContent__price">
+								<strong>5000p</strong>
+							</div>
+							<div class="mainContent__about">
+								<span>Название</span>
+							</div>
+						</div>
+					</a> 									<!-- Конец ссылки -->
+						<div class="boxCart">
+							<a href="#" class="boxCart__link">В корзину</a>
+							<a href="#" class="boxCart__link mobile"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+							<a href="#" class="boxCart__link fav"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+						</div>
+					</div>
+					<div class="box__more">
+						<div class="mainContent__preview">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+						</div>
+					</div>
+				</div>
+
+
+
+
+				<div class="mainContent__box">
+					<a href="detail/index.html" class="mainContent__click">	<!-- Ссылка на товар -->
+					</a><div class="mainContent"><a href="detail/index.html" class="mainContent__click">
+						<div class="mainContent__image">
+							<img src="index_files/12005147-1.jpg" alt="">
+						</div>
+						<div class="mainContent__footer">
+							<div class="mainContent__price">
+								<strong>5000p</strong>
+							</div>
+							<div class="mainContent__about">
+								<span>Название</span>
+							</div>
+						</div>
+					</a> 									<!-- Конец ссылки -->
+						<div class="boxCart">
+							<a href="#" class="boxCart__link">В корзину</a>
+							<a href="#" class="boxCart__link mobile"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+							<a href="#" class="boxCart__link fav"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+						</div>
+					</div>
+					<div class="box__more">
+						<div class="mainContent__preview">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+						</div>
+					</div>
+				</div>
+
+
+
+
+				<div class="mainContent__box">
+					<a href="detail/index.html" class="mainContent__click">	<!-- Ссылка на товар -->
+					</a><div class="mainContent"><a href="detail/index.html" class="mainContent__click">
+						<div class="mainContent__image">
+							<img src="index_files/12005147-1.jpg" alt="">
+						</div>
+						<div class="mainContent__footer">
+							<div class="mainContent__price">
+								<strong>5000p</strong>
+							</div>
+							<div class="mainContent__about">
+								<span>Название</span>
+							</div>
+						</div>
+					</a> 									<!-- Конец ссылки -->
+						<div class="boxCart">
+							<a href="#" class="boxCart__link">В корзину</a>
+							<a href="#" class="boxCart__link mobile"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+							<a href="#" class="boxCart__link fav"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+						</div>
+					</div>
+					<div class="box__more">
+						<div class="mainContent__preview">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="mainContent__box">
+					<a href="detail/index.html" class="mainContent__click">	<!-- Ссылка на товар -->
+					</a><div class="mainContent"><a href="detail/index.html" class="mainContent__click">
+						<div class="mainContent__image">
+							<img src="index_files/12005147-1.jpg" alt="">
+						</div>
+						<div class="mainContent__footer">
+							<div class="mainContent__price">
+								<strong>5000p</strong>
+							</div>
+							<div class="mainContent__about">
+								<span>Название</span>
+							</div>
+						</div>
+					</a> 									<!-- Конец ссылки -->
+						<div class="boxCart">
+							<a href="#" class="boxCart__link">В корзину</a>
+							<a href="#" class="boxCart__link mobile"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+							<a href="#" class="boxCart__link fav"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+						</div>
+					</div>
+					<div class="box__more">
+						<div class="mainContent__preview">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+						</div>
+					</div>
+				</div>
+
+
+
+
+				<div class="mainContent__box">
+					<a href="detail/index.html" class="mainContent__click">	<!-- Ссылка на товар -->
+					</a><div class="mainContent"><a href="detail/index.html" class="mainContent__click">
+						<div class="mainContent__image">
+							<img src="index_files/12005147-1.jpg" alt="">
+						</div>
+						<div class="mainContent__footer">
+							<div class="mainContent__price">
+								<strong>5000p</strong>
+							</div>
+							<div class="mainContent__about">
+								<span>Название</span>
+							</div>
+						</div>
+					</a> 									<!-- Конец ссылки -->
+						<div class="boxCart">
+							<a href="#" class="boxCart__link">В корзину</a>
+							<a href="#" class="boxCart__link mobile"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+							<a href="#" class="boxCart__link fav"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+						</div>
+					</div>
+					<div class="box__more">
+						<div class="mainContent__preview">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="mainContent__box">
+					<a href="detail/index.html" class="mainContent__click">	<!-- Ссылка на товар -->
+					</a><div class="mainContent"><a href="detail/index.html" class="mainContent__click">
+						<div class="mainContent__image">
+							<img src="index_files/12005147-1.jpg" alt="">
+						</div>
+						<div class="mainContent__footer">
+							<div class="mainContent__price">
+								<strong>5000p</strong>
+							</div>
+							<div class="mainContent__about">
+								<span>Название</span>
+							</div>
+						</div>
+					</a> 									<!-- Конец ссылки -->
+						<div class="boxCart">
+							<a href="#" class="boxCart__link">В корзину</a>
+							<a href="#" class="boxCart__link mobile"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+							<a href="#" class="boxCart__link fav"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+						</div>
+					</div>
+					<div class="box__more">
+						<div class="mainContent__preview">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+						</div>
+					</div>
+				</div>
+
+
+
+
+				<div class="mainContent__box">
+					<a href="detail/index.html" class="mainContent__click">	<!-- Ссылка на товар -->
+					</a><div class="mainContent"><a href="detail/index.html" class="mainContent__click">
+						<div class="mainContent__image">
+							<img src="index_files/12005147-1.jpg" alt="">
+						</div>
+						<div class="mainContent__footer">
+							<div class="mainContent__price">
+								<strong>5000p</strong>
+							</div>
+							<div class="mainContent__about">
+								<span>Название</span>
+							</div>
+						</div>
+					</a> 									<!-- Конец ссылки -->
+						<div class="boxCart">
+							<a href="#" class="boxCart__link">В корзину</a>
+							<a href="#" class="boxCart__link mobile"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+							<a href="#" class="boxCart__link fav"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+						</div>
+					</div>
+					<div class="box__more">
+						<div class="mainContent__preview">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+							<img class="preview__img" src="index_files/12005147-1.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</section>
+	</main>
+	<!-- <script src="/scripts/mainContent__topnav.js"></script> -->
+	<!-- <script src="/scripts/header.js"></script> -->
+	<!-- <script src="/scripts/topnav.js"></script> -->
+	<script src="index_files/itemModal.js"></script>
+	<script src="index_files/inputImage.js"></script>
+	<script src="index_files/jquery-3.js"></script>
 <div class="bottomPanel">
 	<a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
 	<a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>

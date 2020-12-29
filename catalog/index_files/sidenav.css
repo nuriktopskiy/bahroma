@@ -45,7 +45,7 @@
 	border-right: 1px solid #666;
 }
 
-#topnav ul li:hover > a, #topnav ul li:hover p{
+#topnav ul li:hover > a, #topnav ul li:hover > p{
 	background-color: #333;
     color: #cfac6a!important;
 }
@@ -62,6 +62,16 @@
 	left: 0;
 }
 
+#topnav ul li ul li ul{
+	top: 0;
+	left: 230px;
+}
+
+#topnav ul li ul li ul .ul__wrap{
+	top: 0;
+	left: 9px;
+}
+
 #topnav .ul__wrap{
 	background: rgba(0, 0, 0, 0.9);
 	position: relative;
@@ -72,11 +82,11 @@
 	background: #333;
 }
 
-#topnav ul li:hover ul{
+#topnav ul li:hover > ul{
 	display: block;
 }
 
-#topnav ul li a:not(.drop), #topnav ul li p{
+#topnav ul li a:not(.drop), #topnav ul li p:not(.drop){
 	color: #fff;
 	padding: 12px 15px 12px 15px;
 	display: block;
@@ -98,6 +108,7 @@
 }
 
 #topnav .drop{
+	display: none;
 	position: absolute;
     top: 0;
     right: 0;
@@ -122,30 +133,49 @@
 	display: none;
 }
 
-.ul__wrap:after, .ul__wrap:before {
-	content: ""; 
+#topnav .accordeon > li > ul > .ul__wrap:after, #topnav .accordeon > li > ul > .ul__wrap:before {
+	content: "";
 	border: solid transparent;
 	position: absolute;    
 	left: 8px;
 	bottom: 100%;
 }
-.ul__wrap:after {
+#topnav .accordeon > li > ul > .ul__wrap:after {
 	border-bottom-color: rgba(0, 0, 0, 0.9);
 	border-width: 8px;
 	margin-left: 0;
 }
-.ul__wrap:before {
+#topnav .accordeon > li > ul > .ul__wrap:before {
 	border-bottom-color: #cfac6a;
 	border-width: 9px;
 	margin-left: -1px;
 }
 
+#topnav ul li ul li ul .ul__wrap:after, #topnav ul li ul li ul .ul__wrap:before{
+	content: ""; 
+	border: solid transparent;
+	position: absolute;  
+	right: 100%;
+	top: 15px;
+}
+
+#topnav ul li ul li ul .ul__wrap:after{
+	border-right-color: rgba(0, 0, 0, 0.9);
+	border-width: 8px;
+	margin-top: 0;
+}
+
+#topnav ul li ul li ul .ul__wrap:before {
+	border-right-color: #cfac6a;
+	border-width: 9px;
+	margin-top: -1px;
+}
 
 #topnav .addItemMenu{
 	margin-right: 5px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 719px) {
 	#topnav{
 		background: rgba(0, 0, 0, 0.9);
 		height: 100%;
@@ -163,6 +193,10 @@
 		margin-top: 40px;
 		background-color: unset;
 		flex-direction: column;
+	}
+
+	#topnav .accordeon__add{
+		justify-content: normal!important;
 	}
 
 	#topnav ul li:hover > a:not(.drop){
@@ -194,6 +228,7 @@
 	}
 
 	#topnav .drop{
+		display: block;
 		padding: 13.5px 11.5px 6.5px 11.5px;
 	}
 
